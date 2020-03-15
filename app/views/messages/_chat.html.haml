@@ -1,0 +1,42 @@
+.chat
+  .chat-header
+    .left-box
+      .left-box__title
+        グループ名
+      %ul.left-box__members
+        Member:
+        %li.member
+          名前
+        %li.member
+          名前
+    .right-box
+      = link_to '#', class:"edit-btn" do
+        Edit
+
+  .messages
+    .message
+      .upper-message
+        %p.upper-message__member
+          名前
+        %p.upper-message__date
+          2020:1/12
+      .lower-message
+        %p.lower-message__text
+          test
+    .message
+      .upper-message
+        %p.upper-message__member
+          名前
+        %p.upper-message__date
+          2020:1/12
+      .lower-message
+        %p.lower-message__text
+          test
+  .form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: 'submit', value: 'Send', class: "submit-btn"}

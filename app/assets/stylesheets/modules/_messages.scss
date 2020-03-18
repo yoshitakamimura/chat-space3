@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     height: 100px;
+    overflow: scroll;
     .side-header-box{
       display: flex; justify-content: space-between;
       height: 20px;
@@ -43,7 +44,8 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
-    .side-groups__group{
+    overflow: scroll;
+    .group{
       margin-bottom: 40px;
       .group__name{
         color: white;
@@ -51,7 +53,7 @@
         font-size: 15px;
         margin-bottom: 5px;
       }
-      .side-groups__latest-message{
+      .group__latest-message{
         color: white;
         text-decoration: none;
         font-size: 11px;
@@ -71,6 +73,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    overflow: scroll;
     .left-box{
       margin-top: 35px;
       &__title{
@@ -106,6 +109,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 35px 40px 0;
+    overflow: scroll;
     .message{
       margin-bottom: 40px;
       .upper-message{
@@ -136,9 +140,7 @@
 
     form{
       display: flex;
-      background-color: #d2d2d2;
       .input-box{
-        width: 100%;
         display: flex;
         position: relative;
         &__text{
@@ -152,6 +154,7 @@
           position: absolute;
           top: 10px;
           right: 10px;
+          font-size: 1.3rem;
         
           &__file{
             display: none;
@@ -166,7 +169,6 @@
         padding: 0 30px;
         margin-left: 15px;
       }
-
     }
   }
 }

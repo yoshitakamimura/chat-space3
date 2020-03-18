@@ -13,9 +13,9 @@
 
   .side-groups
     - current_user.groups.each do |group|
-      .side-groups__group
-        = link_to '#' do
+      .group
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
-          .side-groups__latest-message
-            まだメッセージがありません
+          .group__latest-message
+            = group.show_last_message
